@@ -1,0 +1,1417 @@
+{
+    "tabs": [
+        {
+            "data": {
+                "items": [
+                    {
+                        "color": [
+                            255, 
+                            0, 
+                            0, 
+                            180
+                        ], 
+                        "text": "world", 
+                        "controls": [
+                            "world_ctl"
+                        ], 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                37.85494867199283, 
+                                7.586442264447174
+                            ], 
+                            [
+                                37.85494867199283, 
+                                -7.586442264447174
+                            ], 
+                            [
+                                -37.85494867199283, 
+                                -7.586442264447178
+                            ], 
+                            [
+                                -37.85494867199283, 
+                                7.586442264447173
+                            ]
+                        ], 
+                        "position": [
+                            76.48085949426695, 
+                            -207.38683247398131
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            234, 
+                            0, 
+                            180
+                        ], 
+                        "text": "global", 
+                        "controls": [
+                            "global_C0_ctl"
+                        ], 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                35.70147527941484, 
+                                7.586442264447174
+                            ], 
+                            [
+                                35.70147527941484, 
+                                -7.586442264447174
+                            ], 
+                            [
+                                -35.70147527941484, 
+                                -7.586442264447178
+                            ], 
+                            [
+                                -35.70147527941484, 
+                                7.586442264447173
+                            ]
+                        ], 
+                        "position": [
+                            -1.7428032000458664, 
+                            -207.32196407437507
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            234, 
+                            0, 
+                            180
+                        ], 
+                        "text": "local", 
+                        "controls": [
+                            "local_C0_ctl"
+                        ], 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.5024605552733, 
+                                7.586442264447174
+                            ], 
+                            [
+                                36.5024605552733, 
+                                -7.586442264447174
+                            ], 
+                            [
+                                -36.5024605552733, 
+                                -7.586442264447178
+                            ], 
+                            [
+                                -36.5024605552733, 
+                                7.586442264447173
+                            ]
+                        ], 
+                        "position": [
+                            -77.91137367441029, 
+                            -208.42560817101128
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "import pymel.core as pm\nimport mgear.core.anim_utils as anim_utils\nreload(anim_utils)\nif not __INIT__:\n    pm.warning(__NAMESPACE__)\n\n    userWheels = pm.ls(\"*:*_translateFollow_cns\") + pm.ls(\"*_translateFollow_cns\")\n    if __NAMESPACE__:\n        #__NAMESPACE__= \"libr_prp_testassetmodelimport_rig_rig_0006_fixPrefixGuides:\"\n        pm.warning(__NAMESPACE__)\n        infoLists = anim_utils.gather_wheel_info(userWheels, namespace = __NAMESPACE__+ \":\")\n    else:\n        if userWheels:\n            infoLists = anim_utils.gather_wheel_info(userWheels, namespace = \"\")\n            anim_utils.run_wheel_bake(infoLists)\n        else:\n            pm.warning(\"No wheels found\")    \n    ####\n    #delete_existing_anim(infoLists)\n    ######", 
+                        "color": [
+                            0, 
+                            170, 
+                            255, 
+                            255
+                        ], 
+                        "text": "Bake Wheel Rotation", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                -95.14121669200588, 
+                                15.556349186104047
+                            ], 
+                            [
+                                -95.14121669200588, 
+                                -15.556349186104045
+                            ], 
+                            [
+                                95.14121669200588, 
+                                -15.556349186104052
+                            ], 
+                            [
+                                95.14121669200595, 
+                                15.556349186104043
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            -0.6603380945057502, 
+                            -237.99194421909618
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 11.0
+                    }, 
+                    {
+                        "color": [
+                            0, 
+                            85, 
+                            0, 
+                            0
+                        ], 
+                        "text": "Car", 
+                        "text_color": [
+                            255, 
+                            255, 
+                            255, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                0.0, 
+                                0.0
+                            ], 
+                            [
+                                17.875583851012607, 
+                                34.96201818595114
+                            ]
+                        ], 
+                        "position": [
+                            -137.58442884078056, 
+                            273.19645503749484
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "import pymel.core as pm\nif not __INIT__:\n    rig_controllers_search = cmds.ls(\"rig_*_controllers_grp\") + pm.ls(\"rig_*_controllers_grp\")\n    grp = rig_controllers_search[0]\n\n    members = pm.PyNode(grp).members()\n    pm.select(members, r=True)", 
+                        "color": [
+                            255, 
+                            116, 
+                            207, 
+                            255
+                        ], 
+                        "text": "Select ALL", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                -26.750077376998473, 
+                                13.727019369306321
+                            ], 
+                            [
+                                -26.750077376998473, 
+                                -13.727019369306321
+                            ], 
+                            [
+                                26.750077376998473, 
+                                -13.72701936930633
+                            ], 
+                            [
+                                26.750077376998473, 
+                                13.72701936930632
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            92.02200179192167, 
+                            -71.91402225816147
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 9.0
+                    }, 
+                    {
+                        "action_script": "import pymel.core as pm\nif not __INIT__:\n    rig_controllers_search = cmds.ls(\"rig_*_controllers_grp\") + pm.ls(\"rig_*_controllers_grp\")\n    grp = rig_controllers_search[0]\n\n    members = pm.PyNode(grp).members()\n    pm.setKeyframe(members)", 
+                        "color": [
+                            85, 
+                            170, 
+                            127, 
+                            255
+                        ], 
+                        "text": "Key ALL", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                -28.25548987961244, 
+                                14.499534016308685
+                            ], 
+                            [
+                                -28.25548987961244, 
+                                -14.499534016308685
+                            ], 
+                            [
+                                28.25548987961244, 
+                                -14.499534016308694
+                            ], 
+                            [
+                                28.255489879612444, 
+                                14.499534016308681
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            93.49322901507163, 
+                            -112.43125132314545
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "color": [
+                            32, 
+                            183, 
+                            255, 
+                            255
+                        ], 
+                        "position": [
+                            -130.6587560446053, 
+                            48.12148864112308
+                        ], 
+                        "rotation": 0.0, 
+                        "handles": [
+                            [
+                                0.9107411622245238, 
+                                14.297607416072902
+                            ], 
+                            [
+                                17.161334124072333, 
+                                -6.248575607774075
+                            ], 
+                            [
+                                7.854222323074181, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                8.199050751631459, 
+                                -25.752514248070625
+                            ], 
+                            [
+                                -7.9157789906249985, 
+                                -25.751429599999998
+                            ], 
+                            [
+                                -7.9157789906249985, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                -16.504747396874997, 
+                                -6.248575607774073
+                            ], 
+                            [
+                                0.521122191775182, 
+                                14.297607416072896
+                            ]
+                        ], 
+                        "controls": [
+                            "rearWheel_L0_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            255, 
+                            0, 
+                            255
+                        ], 
+                        "position": [
+                            -54.11747016127937, 
+                            198.6274347565213
+                        ], 
+                        "rotation": -45.0, 
+                        "handles": [
+                            [
+                                3.3962235098352758, 
+                                12.674878692565148
+                            ], 
+                            [
+                                2.6491503127358693, 
+                                2.317675069236166
+                            ], 
+                            [
+                                12.674878692565146, 
+                                3.396223509835279
+                            ], 
+                            [
+                                12.674878692565148, 
+                                -3.3962235098352753
+                            ], 
+                            [
+                                2.317675069236178, 
+                                -2.6491503127358658
+                            ], 
+                            [
+                                3.3962235098352793, 
+                                -12.674878692565146
+                            ], 
+                            [
+                                -3.396223509835276, 
+                                -12.674878692565148
+                            ], 
+                            [
+                                -2.9806255562355704, 
+                                -3.3121007997352696
+                            ], 
+                            [
+                                -12.674878692565146, 
+                                -3.3962235098352864
+                            ], 
+                            [
+                                -12.674878692565152, 
+                                3.39622350983527
+                            ], 
+                            [
+                                -3.76189349983213, 
+                                3.329301872605768
+                            ], 
+                            [
+                                -3.3962235098352873, 
+                                12.674878692565146
+                            ]
+                        ], 
+                        "controls": [
+                            "wheelsUiHost_C0_ctl"
+                        ]
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n    \n    attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_mpLocator\", ud = False, keyable=False)[0])\n    \n    pm.select(attr.get())\n    if attr.get() == \"\":\n        pass\n    \n        pm.warning(\"Not yet set\")\n    if attr.get() != \"\":\n        pm.warning(attr.get() + \" selected.\") ", 
+                        "color": [
+                            0, 
+                            170, 
+                            0, 
+                            255
+                        ], 
+                        "text": "MP locator", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                14.142135623730951
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -14.14213562373095
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -14.142135623730955
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                14.142135623730947
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            0.10591543859101549, 
+                            -182.62148252932496
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            255, 
+                            0, 
+                            90
+                        ], 
+                        "text": "Select Chasis", 
+                        "controls": [
+                            "chasis_C0_ctl"
+                        ], 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                40.34916340814018, 
+                                14.142135623730951
+                            ], 
+                            [
+                                40.34916340814018, 
+                                -14.14213562373095
+                            ], 
+                            [
+                                -40.34916340814018, 
+                                -14.142135623730955
+                            ], 
+                            [
+                                -40.34916340814019, 
+                                14.142135623730947
+                            ]
+                        ], 
+                        "position": [
+                            -57.542630031027926, 
+                            -20.8050741341402
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n\n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n\n        if attr.find(\"front\") != -1 and attr.find(\"_brake\") != -1:\n            pm.PyNode(control+\".\"+attr).set(1)\n    pm.warning( \"Rear wheel breaks ON\")", 
+                        "color": [
+                            255, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Front Breaks ON", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.382181714843998
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.382181714843997
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.382181714844002
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.382181714843995
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            97.43324654739442, 
+                            175.78885820006815
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 9.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n\n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n\n        if attr.find(\"front\") != -1 and attr.find(\"_brake\") != -1:\n            pm.PyNode(control+\".\"+attr).set(0)\n    pm.warning( \"Front wheel breaks OFF\")", 
+                        "color": [
+                            0, 
+                            170, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Front Breaks OFF", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.382181714843998
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.382181714843997
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.382181714844002
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.382181714843995
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            96.88355482299951, 
+                            200.52388535056008
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n\n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n\n        if attr.find(\"rear\") != -1 and attr.find(\"_brake\") != -1:\n            pm.PyNode(control+\".\"+attr).set(0)\n    pm.warning( \"Rear wheel breaks OFF\")", 
+                        "color": [
+                            0, 
+                            170, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Rear Breaks OFF", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.382181714843998
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.382181714843997
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.382181714844002
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.382181714843995
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            95.21011878851328, 
+                            11.96513656708748
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 9.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n\n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n\n        if attr.find(\"rear\") != -1 and attr.find(\"_brake\") != -1:\n            pm.PyNode(control+\".\"+attr).set(1)\n    pm.warning( \"Rear wheel breaks ON\")", 
+                        "color": [
+                            255, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Rear Breaks ON", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.382181714843998
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.382181714843997
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.382181714844002
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.382181714843995
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            93.92529693099264, 
+                            -9.987364596601179
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 9.0
+                    }, 
+                    {
+                        "color": [
+                            32, 
+                            183, 
+                            255, 
+                            255
+                        ], 
+                        "position": [
+                            -128.178182365711, 
+                            186.01761312029808
+                        ], 
+                        "rotation": 0.0, 
+                        "handles": [
+                            [
+                                0.9107411622245238, 
+                                14.297607416072902
+                            ], 
+                            [
+                                17.161334124072333, 
+                                -6.248575607774075
+                            ], 
+                            [
+                                7.854222323074181, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                8.199050751631459, 
+                                -25.752514248070625
+                            ], 
+                            [
+                                -7.9157789906249985, 
+                                -25.751429599999998
+                            ], 
+                            [
+                                -7.9157789906249985, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                -16.504747396874997, 
+                                -6.248575607774073
+                            ], 
+                            [
+                                0.521122191775182, 
+                                14.297607416072896
+                            ]
+                        ], 
+                        "controls": [
+                            "frontWheel_L0_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            170, 
+                            255, 
+                            255
+                        ], 
+                        "position": [
+                            21.251674816842616, 
+                            186.0176131202981
+                        ], 
+                        "rotation": 360.0, 
+                        "handles": [
+                            [
+                                -0.9107411622245238, 
+                                14.297607416072902
+                            ], 
+                            [
+                                -17.161334124072333, 
+                                -6.248575607774075
+                            ], 
+                            [
+                                -7.854222323074181, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                -8.199050751631459, 
+                                -25.752514248070625
+                            ], 
+                            [
+                                7.9157789906249985, 
+                                -25.751429599999998
+                            ], 
+                            [
+                                7.9157789906249985, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                16.504747396874997, 
+                                -6.248575607774073
+                            ], 
+                            [
+                                -0.521122191775182, 
+                                14.297607416072896
+                            ]
+                        ], 
+                        "controls": [
+                            "frontWheel_R0_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            170, 
+                            255, 
+                            255
+                        ], 
+                        "position": [
+                            23.732248495736933, 
+                            48.12148864112308
+                        ], 
+                        "rotation": 360.0, 
+                        "handles": [
+                            [
+                                -0.9107411622245238, 
+                                14.297607416072902
+                            ], 
+                            [
+                                -17.161334124072333, 
+                                -6.248575607774075
+                            ], 
+                            [
+                                -7.854222323074181, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                -8.199050751631459, 
+                                -25.752514248070625
+                            ], 
+                            [
+                                7.9157789906249985, 
+                                -25.751429599999998
+                            ], 
+                            [
+                                7.9157789906249985, 
+                                -6.252149974999999
+                            ], 
+                            [
+                                16.504747396874997, 
+                                -6.248575607774073
+                            ], 
+                            [
+                                -0.521122191775182, 
+                                14.297607416072896
+                            ]
+                        ], 
+                        "controls": [
+                            "rearWheel_R0_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    sel = pm.selected()\n    if sel:\n        control = \"wheelsUiHost_C0_ctl\"\n        if __NAMESPACE__:\n            control = __NAMESPACE__ + \":\" + control\n        pm.warning(control)\n        #if __NAMESPACE__:\n        #    world_control = __NAMESPACE__ + \":\" + world_control\n        \n        attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_mpLocator\", ud = False, keyable=False)[0])\n        \n        attr.set(sel[0])\n        pm.warning(\"Motion Path Locator set to: \" + str(sel[0]))", 
+                        "color": [
+                            170, 
+                            85, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Set MP Locator", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                10.94291496118268
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -10.942914961182678
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -10.942914961182684
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                10.942914961182677
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            1.0216106302232362, 
+                            -155.37881684190822
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    sel = pm.selected()\n    if sel:\n        control = \"wheelsUiHost_C0_ctl\"\n        if __NAMESPACE__:\n            control = __NAMESPACE__ + \":\" + control\n        pm.warning(control)\n        #if __NAMESPACE__:\n        #    world_control = __NAMESPACE__ + \":\" + world_control\n        \n        attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_motionPathName\", ud = False, keyable=False)[0])\n        \n        attr.set(sel[0])\n        pm.warning(\"Motion Path Node set to: \" + str(sel[0]))", 
+                        "color": [
+                            170, 
+                            85, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Set MP Node", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                10.94291496118268
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -10.942914961182678
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -10.942914961182684
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                10.942914961182677
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            79.38372591775084, 
+                            -154.4242615585349
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n    \n    attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_motionPathName\", ud = False, keyable=False)[0])\n    \n\n    if attr.get() == \"\":\n        pass\n    \n        pm.warning(\"Not yet set\")\n    if attr.get() != \"\":\n        pm.select(attr.get())\n        pm.warning(attr.get() + \" selected.\") ", 
+                        "color": [
+                            0, 
+                            85, 
+                            255, 
+                            255
+                        ], 
+                        "text": "MP Node", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                14.142135623730951
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -14.14213562373095
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -14.142135623730955
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                14.142135623730947
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            78.46803072611863, 
+                            -182.62148252932496
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    sel = pm.selected()\n    if sel:\n        control = \"wheelsUiHost_C0_ctl\"\n        if __NAMESPACE__:\n            control = __NAMESPACE__ + \":\" + control\n        pm.warning(control)\n        #if __NAMESPACE__:\n        #    world_control = __NAMESPACE__ + \":\" + world_control\n        \n        attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_mpCurve\", ud = False, keyable=False)[0])\n        \n        attr.set(sel[0])\n        pm.warning(\"MP_Curve set to: \" + str(sel[0]))", 
+                        "color": [
+                            170, 
+                            85, 
+                            0, 
+                            255
+                        ], 
+                        "text": "Set MP Curve", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                10.94291496118268
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -10.942914961182678
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -10.942914961182684
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                10.942914961182677
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            -78.07213253010144, 
+                            -153.4898987918904
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\n\nimport pymel.core as pm\nif not __INIT__:\n\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n    \n    attr = pm.PyNode(control + \".\" + pm.listAttr(control, st = \"*_mpCurve\", ud = False, keyable=False)[0])\n    \n\n    if attr.get() == \"\":\n        pass\n    \n        pm.warning(\"Not yet set\")\n    if attr.get() != \"\":\n        pm.select(attr.get())\n        pm.warning(attr.get() + \" selected.\") ", 
+                        "color": [
+                            0, 
+                            85, 
+                            255, 
+                            255
+                        ], 
+                        "text": "MP Curve", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                36.68105764376379, 
+                                14.142135623730951
+                            ], 
+                            [
+                                36.68105764376379, 
+                                -14.14213562373095
+                            ], 
+                            [
+                                -36.68105764376379, 
+                                -14.142135623730955
+                            ], 
+                            [
+                                -36.68105764376381, 
+                                14.142135623730947
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            -78.98782772173365, 
+                            -183.59946922775887
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n        \n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n        if attr.find(\"_previewOrBaked\") != -1:\n            pm.PyNode(control+\".\"+attr).set(0)\n\n    pm.warning( \"Wheels are in livePreview mode.\")", 
+                        "color": [
+                            0, 
+                            170, 
+                            255, 
+                            255
+                        ], 
+                        "text": "Set Wheels to livePreview Mode", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                82.89762540346503, 
+                                8.913072629101798
+                            ], 
+                            [
+                                82.89762540346503, 
+                                -8.913072629101796
+                            ], 
+                            [
+                                -82.89762540346503, 
+                                -8.913072629101801
+                            ], 
+                            [
+                                -82.89762540346506, 
+                                8.913072629101794
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            70.67640962487458, 
+                            265.0365360932798
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n        \n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n        if attr.find(\"_previewOrBaked\") != -1:\n            pm.PyNode(control+\".\"+attr).set(1)\n\n    pm.warning( \"Wheels are in baked mode.\")", 
+                        "color": [
+                            0, 
+                            170, 
+                            255, 
+                            255
+                        ], 
+                        "text": "Set Wheels to Baked Mode", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                82.50287480630568, 
+                                8.913072629101798
+                            ], 
+                            [
+                                82.50287480630568, 
+                                -8.913072629101796
+                            ], 
+                            [
+                                -82.50287480630568, 
+                                -8.913072629101801
+                            ], 
+                            [
+                                -82.50287480630571, 
+                                8.913072629101794
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            70.83491579976157, 
+                            242.717669895951
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 8.0
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            255, 
+                            0, 
+                            90
+                        ], 
+                        "text": "DRIVE", 
+                        "controls": [
+                            "drive_C0_ctl"
+                        ], 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                -1.7619097441461735, 
+                                28.564124999999997
+                            ], 
+                            [
+                                -33.20012652321194, 
+                                -11.181975
+                            ], 
+                            [
+                                -15.194691332402108, 
+                                -11.190999999999999
+                            ], 
+                            [
+                                -15.861792583046915, 
+                                -48.9155
+                            ], 
+                            [
+                                15.313778178230008, 
+                                -48.9155
+                            ], 
+                            [
+                                15.313778178230008, 
+                                -11.190999999999999
+                            ], 
+                            [
+                                31.929901128215644, 
+                                -11.181975
+                            ], 
+                            [
+                                -1.0081572082860897, 
+                                27.661624999999994
+                            ]
+                        ], 
+                        "position": [
+                            -58.84665555098436, 
+                            124.58598078351812
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 12.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\n\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n        \n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n        if attr.find(\"rear\") != -1 and attr.find(\"_brake\") != -1:\n\n            pm.setKeyframe (pm.PyNode(control+\".\"+attr))\n\n    current_time = pm.currentTime ( q=True)\n    pm.warning( \"Rear Brakes - keyframe set at frame: \" + str(current_time))", 
+                        "color": [
+                            172, 
+                            172, 
+                            172, 
+                            255
+                        ], 
+                        "text": "Key Rear Brakes", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.31199112129323
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.31199112129323
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.311991121293234
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.311991121293229
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            95.84187536234023, 
+                            -31.94729178744674
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "action_script": "\n# Variable reference for custom script execution on pickers.\n# Use the following variables in your code to access related data:\n# __CONTROLS__ for picker item associated controls (will return sets and not content).\n# __FLATCONTROLS__ for associated controls and control set content.\n# __NAMESPACE__ for current picker namespace\n# __INIT__ use 'if not' statement to avoid code execution on creation.\n# __SELF__ to get access to the PickerItem() instace. (Change color, size, etc)\n\nimport pymel.core as pm\n\nif not __INIT__:\n\n    control = \"wheelsUiHost_C0_ctl\"\n    if __NAMESPACE__:\n        control = __NAMESPACE__ + \":\" + control\n        \n    attrs = pm.listAttr(control, ud = True, keyable=True)\n    for attr in attrs:\n        if attr.find(\"front\") != -1 and attr.find(\"_brake\") != -1:\n\n            pm.setKeyframe (pm.PyNode(control+\".\"+attr))\n\n    current_time = pm.currentTime ( q=True)\n    pm.warning( \"Front Brakes - keyframe set at frame: \" + str(current_time))", 
+                        "color": [
+                            172, 
+                            172, 
+                            172, 
+                            255
+                        ], 
+                        "text": "Key Front Brakes", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                53.704736496234595, 
+                                9.31199112129323
+                            ], 
+                            [
+                                53.704736496234595, 
+                                -9.31199112129323
+                            ], 
+                            [
+                                -53.704736496234595, 
+                                -9.311991121293234
+                            ], 
+                            [
+                                -53.70473649623461, 
+                                9.311991121293229
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            99.82417622771746, 
+                            153.9278604304252
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }, 
+                    {
+                        "color": [
+                            255, 
+                            170, 
+                            255, 
+                            90
+                        ], 
+                        "position": [
+                            112.21475182375767, 
+                            -234.3774340629696
+                        ], 
+                        "rotation": 30.0, 
+                        "handles": [
+                            [
+                                3.8637619960776197, 
+                                9.129839867200335
+                            ], 
+                            [
+                                0.6602005381860693, 
+                                7.587104391331175
+                            ], 
+                            [
+                                1.5905141017448015, 
+                                1.0429194761139717
+                            ], 
+                            [
+                                0.5717392137794887, 
+                                -6.635863906953824
+                            ], 
+                            [
+                                -4.665921900566615, 
+                                -12.625724245405475
+                            ], 
+                            [
+                                -12.536813033529791, 
+                                -15.234094383458757
+                            ], 
+                            [
+                                -13.293173405138607, 
+                                -10.056989038010707
+                            ], 
+                            [
+                                -7.793922762564543, 
+                                -8.717832910351614
+                            ], 
+                            [
+                                -3.9355432439348346, 
+                                -4.80621047767688
+                            ], 
+                            [
+                                -2.656942885173787, 
+                                0.40169848400191743
+                            ], 
+                            [
+                                -3.6757177731390844, 
+                                6.777229572448265
+                            ], 
+                            [
+                                -6.6551610934446614, 
+                                6.023201637785466
+                            ], 
+                            [
+                                -3.342461078229065, 
+                                13.560897668913206
+                            ]
+                        ], 
+                        "controls": [
+                            "wheel_R1_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "color": [
+                            76, 
+                            197, 
+                            255, 
+                            90
+                        ], 
+                        "position": [
+                            -114.45536108642723, 
+                            -244.14904247883277
+                        ], 
+                        "rotation": -150.0, 
+                        "handles": [
+                            [
+                                3.8637619960776197, 
+                                9.129839867200335
+                            ], 
+                            [
+                                0.6602005381860693, 
+                                7.587104391331175
+                            ], 
+                            [
+                                1.5905141017448015, 
+                                1.0429194761139717
+                            ], 
+                            [
+                                0.5717392137794887, 
+                                -6.635863906953824
+                            ], 
+                            [
+                                -4.665921900566615, 
+                                -12.625724245405475
+                            ], 
+                            [
+                                -12.536813033529791, 
+                                -15.234094383458757
+                            ], 
+                            [
+                                -13.293173405138607, 
+                                -10.056989038010707
+                            ], 
+                            [
+                                -7.793922762564543, 
+                                -8.717832910351614
+                            ], 
+                            [
+                                -3.9355432439348346, 
+                                -4.80621047767688
+                            ], 
+                            [
+                                -2.656942885173787, 
+                                0.40169848400191743
+                            ], 
+                            [
+                                -3.6757177731390844, 
+                                6.777229572448265
+                            ], 
+                            [
+                                -6.6551610934446614, 
+                                6.023201637785466
+                            ], 
+                            [
+                                -3.342461078229065, 
+                                13.560897668913206
+                            ]
+                        ], 
+                        "controls": [
+                            "wheel_R1_drive_ctl"
+                        ]
+                    }, 
+                    {
+                        "action_script": "import pymel.core as pm\nimport mgear.core.anim_utils as anim_utils\nreload(anim_utils)\nif not __INIT__:\n    pm.warning(__NAMESPACE__)\n\n    userWheels = pm.ls(\"*:*_translateFollow_cns\") + pm.ls(\"*_translateFollow_cns\")\n    if __NAMESPACE__:\n        #__NAMESPACE__= \"libr_prp_testassetmodelimport_rig_rig_0006_fixPrefixGuides:\"\n        pm.warning(__NAMESPACE__)\n        infoLists = anim_utils.gather_wheel_info(userWheels, namespace = __NAMESPACE__+ \":\")\n    else:\n        if userWheels:\n            infoLists = anim_utils.gather_wheel_info(userWheels, namespace = \"\")\n            anim_utils.delete_existing_wheel_anim(infoLists)\n        else:\n            pm.warning(\"No wheels found\") ", 
+                        "color": [
+                            150, 
+                            90, 
+                            90, 
+                            255
+                        ], 
+                        "text": "remove baked anim keyframes", 
+                        "text_color": [
+                            0, 
+                            0, 
+                            0, 
+                            255
+                        ], 
+                        "handles": [
+                            [
+                                95.14121669200588, 
+                                9.875980752467367
+                            ], 
+                            [
+                                95.14121669200588, 
+                                -9.875980752467365
+                            ], 
+                            [
+                                -95.14121669200588, 
+                                -9.87598075246737
+                            ], 
+                            [
+                                -95.14121669200595, 
+                                9.875980752467363
+                            ]
+                        ], 
+                        "action_mode": true, 
+                        "position": [
+                            -1.0658141036401503e-14, 
+                            -270.03083956025665
+                        ], 
+                        "rotation": 0.0, 
+                        "text_size": 10.0
+                    }
+                ], 
+                "background": "path/to/png", 
+                "background_size": [
+                    310, 
+                    570
+                ]
+            }, 
+            "name": "car"
+        }
+    ]
+}
